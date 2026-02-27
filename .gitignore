@@ -1,0 +1,11 @@
+# Dataset and Checkpoints
+checkpoints/
+data/
+datasets/
+*.pth
+*.pt
+
+# Python caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

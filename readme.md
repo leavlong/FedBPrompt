@@ -18,7 +18,7 @@ To address this, we propose **Federated Body Distribution Aware Visual Prompt (F
 
 ## 🏗️ Framework
 
-![graph2](figure\graph2.png)
+![graph2](figure/graph2.png)
 
 On each client, FedBPrompt injects learnable prompts to guide the model's attention toward pedestrian features. The core BAPM learns structured, part-level representations to solve feature misalignment. The framework supports both Full-Parameter training and efficient Prompt-Fine-Tuning (PFTS).
 

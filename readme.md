@@ -24,7 +24,7 @@ On each client, FedBPrompt injects learnable prompts to guide the model's attent
 
 ## 🚀 Main Results
 
-Extensive experiments demonstrate that BAPM effectively enhances feature discrimination and cross-domain generalization[cite: 49]. 
+Extensive experiments demonstrate that BAPM effectively enhances feature discrimination and cross-domain generalization. 
 
 **Comparison under Protocol-1 (Leave-One-Domain-Out):**
 Tested across CUHK02 (C2), CUHK03 (C3), Market1501 (M), and MSMT17 (MS) datasets.

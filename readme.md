@@ -57,3 +57,16 @@ BAPM/data
          | 
          └───query
 ```
+Training Example
+Original method
+```
+python fed_vit_dacs_IL_select.py --test-dataset="market1501" --transformer-type='vit_base_patch16_224_TransReID' --logs-dir='logs/sscu_logs/market1501' 
+```
+BAPM Full Parameters
+```
+python fed_vit_dacs_IL_select.py --test-dataset="market1501" --transformer-type='vit_base_patch16_224_TransReID_Prompt_BAPM' --logs-dir='logs/sscu_logs/market1501' 
+```
+PFTS
+```
+python fed_vit_dacs_IL_select.py --test-dataset="market1501" --transformer-type='vit_base_patch16_224_TransReID_Prompt_BAPM' --logs-dir='logs/sscu_logs/market1501_BAPMtune' --use_prompt=True --load_checkpoint "trained feddgreid_model"
+```

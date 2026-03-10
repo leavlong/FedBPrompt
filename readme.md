@@ -58,6 +58,7 @@ BAPM/data
          └───query
 ```
 Training Example
+
 Original method
 ```
 python fed_vit_dacs_IL_select.py --test-dataset="market1501" --transformer-type='vit_base_patch16_224_TransReID' --logs-dir='logs/sscu_logs/market1501' 

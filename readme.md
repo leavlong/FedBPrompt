@@ -18,13 +18,13 @@ To address this, we propose **Federated Body Distribution Aware Visual Prompt (F
 
 ## 🏗️ Framework
 
-![graph2](figure\graph2.png)
+![graph2](figure/graph2.png)
 
 On each client, FedBPrompt injects learnable prompts to guide the model's attention toward pedestrian features. The core BAPM learns structured, part-level representations to solve feature misalignment. The framework supports both Full-Parameter training and efficient Prompt-Fine-Tuning (PFTS).
 
 ## 🚀 Main Results
 
-Extensive experiments demonstrate that BAPM effectively enhances feature discrimination and cross-domain generalization[cite: 49]. 
+Extensive experiments demonstrate that BAPM effectively enhances feature discrimination and cross-domain generalization. 
 
 **Comparison under Protocol-1 (Leave-One-Domain-Out):**
 Tested across CUHK02 (C2), CUHK03 (C3), Market1501 (M), and MSMT17 (MS) datasets.
@@ -56,4 +56,18 @@ BAPM/data
          └───bounding_box_test
          | 
          └───query
+```
+Training Example
+
+Original method
+```
+python fed_vit_dacs_IL_select.py --test-dataset="market1501" --transformer-type='vit_base_patch16_224_TransReID' --logs-dir='logs/sscu_logs/market1501' 
+```
+BAPM Full Parameters
+```
+python fed_vit_dacs_IL_select.py --test-dataset="market1501" --transformer-type='vit_base_patch16_224_TransReID_Prompt_BAPM' --logs-dir='logs/sscu_logs/market1501' 
+```
+PFTS
+```
+python fed_vit_dacs_IL_select.py --test-dataset="market1501" --transformer-type='vit_base_patch16_224_TransReID_Prompt_BAPM' --logs-dir='logs/sscu_logs/market1501_BAPMtune' --use_prompt=True --load_checkpoint "trained feddgreid_model"
 ```

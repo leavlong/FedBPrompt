@@ -1,7 +1,6 @@
 # Dataset and Checkpoints
 checkpoints/
 data/
-datasets/
 *.pth
 *.pt
 

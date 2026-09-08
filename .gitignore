@@ -1,6 +1,7 @@
 # Dataset and Checkpoints
 checkpoints/
 data/
+!reid/utils/data/
 *.pth
 *.pt
 
